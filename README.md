@@ -20,3 +20,6 @@ The task will require you to refactor or rewrite the app. The implementation req
 Create a simple front-end application using Angular 2+ that consumes the API and displays a list of
 members/ticket barcodes per season and a game, or product. The season and game combination
 should be selected using dropdowns. The product must be selected using a dropdown as well.
+
+## Submission
+Branch off the master branch, and when you are done, create a pull request to submit your exercise. The branch should be named after your name.
