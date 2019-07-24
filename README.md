@@ -22,4 +22,4 @@ members/ticket barcodes per season and a game, or product. The season and game c
 should be selected using dropdowns. The product must be selected using a dropdown as well.
 
 ## Submission
-Branch off the master branch, and when you are done, create a pull request to submit your exercise. The branch should be named after your name.
+Create a fork of this repository. Branch off the master branch, and when you are done, create a pull request to merge the new branch in your fork into the master branch to submit your exercise. The branch should be named after your name.
