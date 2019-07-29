@@ -21,5 +21,11 @@ Create a simple front-end application using Angular 2+ that consumes the API and
 members/ticket barcodes per season and a game, or product. The season and game combination
 should be selected using dropdowns. The product must be selected using a dropdown as well.
 
+## Time Limits
+We do not expect you to spend more than 3 hours on the task, yet of course you can take as much time as you like. There is no hard limit on the submission date either, yet we would like you to submit it within 5 working days of receiving it.
+
+## Assessment
+What we are looking for is code quality. That translates to project structure, clean coding practices, commenting, SOLID principles' application, and testing as applicable. We leave the details to you :)
+
 ## Submission
 Create a fork of this repository. Branch off the master branch, and when you are done, create a pull request to merge the new branch in your fork into the master branch to submit your exercise. The branch should be named after your name.
