@@ -2,10 +2,11 @@
 {
     public class Season
     {
+        public int Id { get; set; }
+
         public Season(int id)
         {
-            this.Id = id;
+            Id = id;
         }
-        public int Id { get; set; }
     }
 }

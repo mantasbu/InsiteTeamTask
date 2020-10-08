@@ -16,5 +16,7 @@ namespace InsiteTeamTask.MockData
         IEnumerable<Game> Games();
 
         IEnumerable<Season> Seasons();
+
+        IEnumerable<Event> Events();
     }
 }
