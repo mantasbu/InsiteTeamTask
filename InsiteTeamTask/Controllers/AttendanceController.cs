@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using InsiteTeamTask.Models;
-using InsiteTeamTask.Repositories;
+using InsiteTeamTask.Repositories.AttendanceRepo;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InsiteTeamTask.Controllers
@@ -9,15 +9,52 @@ namespace InsiteTeamTask.Controllers
     [ApiController]
     public class AttendanceController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<Attendance>> Get()
+        private IAttendanceRepository _attendanceRepository;
+
+        public AttendanceController(IAttendanceRepository attendanceRepository)
         {
-            var repo = new DataRepository();
+            _attendanceRepository = attendanceRepository;
+        }
 
-            var attendance = repo.GetAttendanceListFor(gameNumber: 3);
+        [HttpGet("product/{productId}")]
+        public ActionResult<IEnumerable<Attendance>> GetAttendanceByProductId(string productId)
+        {
+            if (productId == null)
+            {
+                return BadRequest("productId is required");
+            }
 
-            return Ok(attendance);
+            var attendance = _attendanceRepository.GetAttendanceListByProductId(productId);
+
+            if (attendance.Count > 0)
+            {
+                return Ok(attendance);
+            }
+            else
+            {
+                return NotFound("No records found");
+            }
+        }
+
+        [HttpGet("season/{seasonId}/game/{gameId}")]
+        public ActionResult<IEnumerable<Attendance>> GetAttendanceBySeasonIdAndGameId(int seasonId, int gameId)
+        {
+            if (seasonId < 1 || gameId < 1)
+            {
+                return BadRequest("seasonId and gameId are both required");
+            }
+
+
+            var attendance = _attendanceRepository.GetAttendanceListBySeasonIdAndGameId(seasonId, gameId);
+
+            if (attendance.Count > 0)
+            {
+                return Ok(attendance);
+            }
+            else
+            {
+                return NotFound("No records found");
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ namespace InsiteTeamTask
                            new Member() { Id = 875415, ProductId = "IT93" },
                            new Member() { Id = 344174, ProductId = "IT49" },
                            new Member() { Id = 447874, ProductId = "IT52" },
-                           new Member(){ Id = 1000114, ProductId = "IT68" }
+                           new Member() { Id = 1000114, ProductId = "IT68" }
                        };
         }
 
@@ -86,6 +86,16 @@ namespace InsiteTeamTask
                            new Season(16),
                            new Season(19),
                        };
+        }
+
+        public IEnumerable<Event> Events()
+        {
+            return new List<Event>
+            {
+                new Event(1),
+                new Event(2),
+                new Event(3),
+            };
         }
 
     }

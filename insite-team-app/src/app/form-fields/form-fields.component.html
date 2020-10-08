@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="form-group">
+        <label for="productId">Product Id</label>
+        <select class="form-control" id="productId" (change)="selected()" required>
+            <option *ngFor="let product of products" [value]="product">{{ product.id }}</option>
+        </select>
+    </div>
+</div>

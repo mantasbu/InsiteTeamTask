@@ -7,9 +7,8 @@ namespace InsiteTeamTask.Models
 {
     public class Ticket
     {
-        public string Barcode { get; set; }
-
         public string ProductId { get; set; }
 
+        public string Barcode { get; set; }
     }
 }
